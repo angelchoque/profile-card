@@ -1,0 +1,82 @@
+@import "./parcials/_globals.styl"
+
+// 
+// Primary Colors //
+
+color-dark = hsl(185, 75%, 39%)
+color-very-dark-desaturated = hsl(229, 23%, 23%)
+color-grayish = hsl(227, 10%, 46%)
+color-neutral-dark = hsl(0, 0%, 59%)
+
+// Typography
+
+font-main = 'Kumbh Sans', sans-serif
+font-main-size = 18px
+
+// Functions
+
+display-flex-colum(direction = column)
+    display: flex
+    if direction == column
+        flex-direction: column
+        align-items: center
+
+font-size-opacity(size = 18px)
+    font-weight: 400
+    font-size: size
+    color: color-grayish
+    font-family: font-main
+
+*
+    margin: 0
+
+.container
+    width: 100%
+    background-image: url("../images/bg-pattern-top.svg")
+    display-flex-colum()
+    // justify-content: center
+
+.card
+    width: 90%
+    border-radius: 20px
+    margin-top: 150px
+    overflow: hidden
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 16px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 16px 0px rgba(50, 50, 50, 0.5);
+.card__header
+    width: 100%
+    background-image: url("../images/bg-pattern-card.svg")
+    height: 150px
+.card__description
+    background: white
+    position: relative
+    display-flex-colum()
+.card__description figure
+    width: 120px
+    height: 120px
+    border-radius: 50%
+    overflow: hidden
+    position: absolute
+    top: -60px
+    background: white
+    display-flex-colum()
+    justify-content: center
+.card__description figure img
+    width: 110px
+    height: 110px
+    object-fit: cover
+    border-radius: 50%
+.card__description--name
+    margin-top: 80px
+    font-size: font-main-size
+    font-family: font-main
+    font-weight: 700
+.card__description--name span
+    font-size-opacity()
+.card__description > p
+    font-size-opacity()
+.card__description--stats
+
+.attribution
+    display: none

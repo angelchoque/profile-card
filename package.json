@@ -1,0 +1,17 @@
+{
+  "name": "profile-card-component-main",
+  "version": "1.0.0",
+  "description": "Frontend challenge",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Stylus"
+  ],
+  "author": "\"miguel angel dev <miguelangelchoquepacompia@gmail.com>",
+  "license": "MIT"
+}
