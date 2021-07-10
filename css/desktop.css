@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+}
+.bg-top {
+  background-size: 90%;
+  background-position: -40vw -100vh;
+}
+.bg-bottom {
+  background-size: 65%;
+  background-position: 50vw 60vh;
+}

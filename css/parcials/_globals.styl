@@ -1,0 +1,33 @@
+
+// 
+// Primary Colors //
+
+color-dark = hsl(185, 75%, 39%)
+color-very-dark-desaturated = hsl(229, 23%, 23%)
+color-grayish = hsl(227, 10%, 46%)
+color-neutral-dark = hsl(0, 0%, 59%)
+
+// Typography
+
+font-main = 'Kumbh Sans', sans-serif
+font-main-size = 18px
+
+// Functions
+
+display-flex-colum(direction = column)
+    display: flex
+    if direction == column
+        flex-direction: column
+        align-items: center
+    else
+        flex-direction: row
+        justify-content: center
+
+font-size-opacity(size = 18px)
+    font-weight: 400
+    font-size: size
+    color: color-grayish
+    font-family: font-main
+
+*
+    margin: 0

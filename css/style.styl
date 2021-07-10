@@ -1,43 +1,34 @@
 @import "./parcials/_globals.styl"
 
-// 
-// Primary Colors //
-
-color-dark = hsl(185, 75%, 39%)
-color-very-dark-desaturated = hsl(229, 23%, 23%)
-color-grayish = hsl(227, 10%, 46%)
-color-neutral-dark = hsl(0, 0%, 59%)
-
-// Typography
-
-font-main = 'Kumbh Sans', sans-serif
-font-main-size = 18px
-
-// Functions
-
-display-flex-colum(direction = column)
-    display: flex
-    if direction == column
-        flex-direction: column
-        align-items: center
-
-font-size-opacity(size = 18px)
-    font-weight: 400
-    font-size: size
-    color: color-grayish
-    font-family: font-main
-
-*
-    margin: 0
-
 .container
     width: 100%
-    background-image: url("../images/bg-pattern-top.svg")
+    height: 100vh
+    // background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg")
+    // background-size: 100%, 35%
+    // background-repeat: no-repeat, no-repeat
+    // background-position: -100px -100px, bottom 0px
     display-flex-colum()
     // justify-content: center
-
+    background: rgba(25, 162, 174, 1);
+.bg-top
+    width: 100%
+    height: 100vh
+    background-image: url("../images/bg-pattern-top.svg")
+    background-repeat: no-repeat
+    background-size: 120%
+    background-position: -60vw -220px
+.bg-bottom
+    width: 100%
+    height: 100vh
+    background-image: url("../images/bg-pattern-bottom.svg")
+    background-repeat: no-repeat
+    background-size: 130%
+    background-position: 40vw 60vh
+    display-flex-colum()
 .card
+    // display: none
     width: 90%
+    max-width: 375px
     border-radius: 20px
     margin-top: 150px
     overflow: hidden
@@ -48,6 +39,8 @@ font-size-opacity(size = 18px)
     width: 100%
     background-image: url("../images/bg-pattern-card.svg")
     height: 150px
+    background-size: cover
+    background-repeat: no-repeat
 .card__description
     background: white
     position: relative
@@ -72,11 +65,34 @@ font-size-opacity(size = 18px)
     font-size: font-main-size
     font-family: font-main
     font-weight: 700
+    color: color-very-dark-desaturated
 .card__description--name span
     font-size-opacity()
 .card__description > p
     font-size-opacity()
+    margin-top: 10px
+    // letter-spacing: 5px
 .card__description--stats
-
+    margin-top: 30px
+    width: 100%
+    height: 100px
+    display-flex-colum(row)
+    align-items: center
+    border-top: 1px solid lighten(color-neutral-dark, 50%)
+    justify-content: space-evenly
+.description--stats--items
+    display-flex-colum()
+    font-family: font-main
+    color: color-grayish
+    font-size: 14px
+    letter-spacing: 1px
+.description--stats--items > span
+    font-weight: 700
+    color: color-very-dark-desaturated
+    font-size: 18px
+    margin-bottom: 5px
 .attribution
-    display: none
+    margin-top: 40px
+    width: 90%
+    text-align: center
+    font-family: font-main
